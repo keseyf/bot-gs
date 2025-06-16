@@ -1,0 +1,26 @@
+{
+  "name": "bot-gs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tsc && node --watch dist/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "mercadopago": "^2.7.0",
+    "prisma": "^6.8.2",
+    "tsc": "^2.0.4",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.8.2",
+    "@types/node": "^22.15.24",
+    "date-fns": "^4.1.0",
+    "dotenv": "^16.5.0",
+    "grammy": "^1.36.3"
+  }
+}

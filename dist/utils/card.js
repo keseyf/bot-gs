@@ -1,0 +1,31 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const cardPrices = {
+    B2B: 60,
+    BUSINESS: 80,
+    BLACK: 150,
+    BUSINESS_ENHANCED: 60,
+    CLASSIC: 60,
+    CORPORATE: 60,
+    CORPORATE_PURCHASING: 60,
+    CORPORATE_TE: 80,
+    ELECTRON: 60,
+    ELO: 90,
+    ENHANCED: 60,
+    GOLD: 90,
+    GOVERNMENT_CORPORATE_TE: 60,
+    INFINITE: 150,
+    INFINITE_BUSINESS: 115,
+    MICRO_BUSINESS: 60,
+    MIXED_PRODUCT: 60,
+    PLATINUM: 110,
+    PREPAID: 60,
+    REWARDS: 60,
+    SIGNATURE: 110,
+    STANDARD: 60,
+    TRADITIONAL: 60,
+    WORLD_ELITE: 60,
+    WORLD: 60,
+    WORLD_ELITE_FOR_BUSINESS: 60,
+};
+exports.default = cardPrices;
