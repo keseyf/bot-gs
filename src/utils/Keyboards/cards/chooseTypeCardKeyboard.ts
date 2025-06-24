@@ -40,6 +40,8 @@ export const chooseTypeCardKeyboard = new InlineKeyboard()
   .text("💳 WORLD - R$60", "select_card_WORLD")
   .text("💳 WORLD ELITE BUSINESS - R$60", "select_card_WORLD_ELITE_FOR_BUSINESS")
   .row()
+  .text("📖 CURSO DOS 7", "buyCourse")
+  .row()
   .text("💵 Recarregar", "chooseRechargeType")
   .row()
   .text("🔙 Voltar", "main");

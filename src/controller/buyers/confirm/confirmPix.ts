@@ -5,10 +5,10 @@ const composer = new Composer();
 composer.callbackQuery(/^confirm_buy_pix_(.+)/, async (ctx) => {
     const match = ctx.match[1];
     ctx.editMessageText(`
-🔴 Àpos a compra nossa equipe será notificada e irá enviar os dados no seu perfil privado.
-🔴 Tempo de envio pode variar.
+🔴 Àpos a compra nossa equipe será notificada e irá enviar os dados/conteúdo no seu perfil privado atraves do \*bot\* ou \*perfil de suporte\*.
+🔴 \*Tempo de envio pode variar\*!
 
-- \*Cartao\*: ${match.replace(/_/g, " ")}
+- \*Produto\*: ${match.replace(/_/g, " ")}
 - \*Valor\*: R$ ${cardlist[match].toFixed(2)}
 
 🔄 Gerar código pix?`, {

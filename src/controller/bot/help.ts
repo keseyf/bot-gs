@@ -1,5 +1,5 @@
 import { Composer } from "grammy";
-import { backMainKeyboard } from "../utils/Keyboards/bot/backMainKeyboard";
+import { backMainKeyboard } from "../../utils/Keyboards/bot/backMainKeyboard";
 
 const composer = new Composer();
 composer.callbackQuery("help", async (ctx) => {

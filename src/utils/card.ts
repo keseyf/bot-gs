@@ -1,4 +1,5 @@
-const cardPrices: Record<string, number> = {
+const products
+: Record<string, number> = {
   B2B: 60,
   BUSINESS: 80,
   BLACK: 150,
@@ -25,6 +26,7 @@ const cardPrices: Record<string, number> = {
   WORLD_ELITE: 60,
   WORLD: 60,
   WORLD_ELITE_FOR_BUSINESS: 60,
+  CURSO_SETE: 110
 };
 
-export default cardPrices
+export default products

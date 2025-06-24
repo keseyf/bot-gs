@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const cardPrices = {
+const products = {
     B2B: 60,
     BUSINESS: 80,
     BLACK: 150,
@@ -27,5 +27,6 @@ const cardPrices = {
     WORLD_ELITE: 60,
     WORLD: 60,
     WORLD_ELITE_FOR_BUSINESS: 60,
+    CURSO_SETE: 110
 };
-exports.default = cardPrices;
+exports.default = products;

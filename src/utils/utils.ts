@@ -22,4 +22,6 @@ if (!BToken) {
 
 const prisma = new PrismaClient()
 const app = new Bot(process.env.BOT_TOKEN!)
+// const appSms = new Bot(process.env.BOT_SMS_TOKEN!)
+// const appOrders = new Bot(process.env.BOT_ORDER_TOKEN!)
 export {app, prisma, client}
