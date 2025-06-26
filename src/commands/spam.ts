@@ -3,7 +3,7 @@ import { prisma } from "../utils/utils";
 
 const composer = new Composer();
 
-composer.command("spam_1", async (ctx) => {
+composer.command("spam", async (ctx) => {
     const userId = ctx.from?.id;
 
     if (!userId) {
@@ -15,8 +15,12 @@ composer.command("spam_1", async (ctx) => {
     })
 
     if(user?.userType === "admin") {
-        await ctx.reply("Spam 1 command executed.");
-        // Here you can add the logic for the spam command
+        const spamMessage = ctx.match[1]
+        if (!spamMessage || spamMessage === undefined || spamMessage === null){
+ctx.reply("Você não utilizou corretamente o comando!\nUso correto: /spam <Mensagem>"
+}
+    }else{
+       return;
     }
 });
 
