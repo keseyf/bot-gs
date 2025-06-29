@@ -20,5 +20,5 @@ exports.mainKeyboard = new grammy_1.InlineKeyboard()
     .text("👤 Perfil", "profile")
     .text("❓ Sobre", "help")
     .row()
-    // .url("📢 Refs", "https://t.me/canalgratist")
+    // .url("📢 Refs",                                "https://t.me/canalgratist")
     .url("👥 Suporte", `https://t.me/${sellerUsername}`);

@@ -4,9 +4,13 @@ const grammy_1 = require("grammy");
 const utils_1 = require("../../utils/utils");
 const composer = new grammy_1.Composer();
 composer.callbackQuery("sendT", async (ctx) => {
-    const uid = ctx.from.id;
+    const uid = ctx.from?.id;
+    if (!uid) {
+        await ctx.reply("Usuário não identificado.");
+        return;
+    }
     const user = await utils_1.prisma.user.findUnique({
-        where: { telegramId: String(uid) }
+        where: { telegramId: String(uid) },
     });
     if (user?.userType !== "admin") {
         await ctx.reply("❌ Você não possui permissão para utilizar este comando!");

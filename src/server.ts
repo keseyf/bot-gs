@@ -65,8 +65,6 @@ app.use(main);
 app.start({
     onStart: () => {
         console.clear()
-        console.log("[+] ByeBot is running!");
-        console.log("[+] Use /start to begin.");
-        console.log("-w- #FYÉ");
+        console.log("[+] ByeBot v1 is running\n[+] o.O #FYE")
     }
 });

@@ -1,9 +1,9 @@
 import { Composer } from "grammy";
 import { prisma } from "../utils/utils";
+import spamlist from "../utils/preTexts/texts";
 
 const composer = new Composer();
 
-// Captura /spam <mensagem>
 composer.hears(/^\/spam(?:@[\w_]+)? (.+)/, async (ctx) => {
     const userId = ctx.from?.id;
 
@@ -16,28 +16,32 @@ composer.hears(/^\/spam(?:@[\w_]+)? (.+)/, async (ctx) => {
         where: { telegramId: String(userId) },
     });
 
-    if (user?.userType !== "admin") {
-        return; // Ignora se não for admin
-    }
+    if (user?.userType !== "admin") return;
 
-    const spamMessage = ctx.match[1];
-
-    if (!spamMessage || spamMessage.trim() === "") {
-        await ctx.reply("Você não utilizou corretamente o comando!\nUso correto: /spam <mensagem>");
+    const input = ctx.match[1]?.trim();
+    if (!input) {
+        await ctx.reply("Uso correto: /spam <mensagem>");
         return;
     }
 
-    // Busca todos os telegramId dos usuários
+    // Verifica se o input é uma key da spamlist
+    const entry = spamlist.find(obj => Object.hasOwn(obj, input));
+    const spamMessage = entry ? Object.values(entry)[0] : input; // usa a mensagem da lista ou o texto original
+
+    await ctx.reply("**Iniciando!**", { parse_mode: "Markdown" });
+
     const users = await prisma.user.findMany({
         select: { telegramId: true },
     });
 
     let successCount = 0;
     let failCount = 0;
-
+    try{
     for (const u of users) {
         try {
-            await ctx.api.sendMessage(Number(u.telegramId), spamMessage);
+            await ctx.api.sendMessage(Number(u.telegramId), spamMessage, {
+                parse_mode: "Markdown",
+            });
             successCount++;
         } catch (error) {
             console.error(`Erro ao enviar para ${u.telegramId}:`, error);
@@ -45,10 +49,13 @@ composer.hears(/^\/spam(?:@[\w_]+)? (.+)/, async (ctx) => {
         }
     }
 
-    await ctx.reply(`Mensagem enviada para ${successCount} usuários.\nFalhas: ${failCount}`);
+    await ctx.editMessageText(
+        `Mensagem enviada para ${successCount} usuários.\nFalhas: ${failCount}`
+    );}catch{
+        console.log(" e")
+    }
 });
 
-// Fallback caso use apenas "/spam" sem mensagem
 composer.command("spam", async (ctx) => {
     await ctx.reply("Uso correto: /spam <mensagem>");
 });

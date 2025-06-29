@@ -12,7 +12,7 @@ composer.command("termos", async (ctx) => {
 
 Ao utilizar este bot e efetuar uma compra, você declara estar de acordo com os seguintes termos:
 
-1. ✅ O produto oferecido é um *cartão virtual*, entregue exclusivamente por meio digital.
+1. ✅ O produto oferecido é um *cartão clonado*, entregue exclusivamente por meio do bot.
 2. 🚫 *Não realizamos trocas ou devoluções*, exceto em casos comprovados de dados inválidos.
 3. ⏱️ O prazo máximo para reportar qualquer problema é de *5 minutos após a entrega*.
 4. 📸 É obrigatória a apresentação de *vídeo* comprovando o erro, desde a compra até a tentativa de uso.
