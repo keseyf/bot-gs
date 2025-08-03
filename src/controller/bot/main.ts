@@ -36,7 +36,7 @@ composer.callbackQuery("main", async (ctx) => {
 
 🛡️ Lembre-se de ler os /termos antes de prosseguir.
 
-Se precisar de ajuda, utilize o menu ou chame o suporte. Boa compra! [ㅤㅤ](https://i.4cdn.org/r/1749933222382233.jpg)`,
+Se precisar de ajuda, utilize o menu ou chame o suporte. Boa compra! [ㅤㅤ](https://i.4cdn.org/b/1753404701592459.jpg)`,
       {
         parse_mode: "Markdown",
         reply_markup: mainKeyboard,
@@ -70,7 +70,7 @@ Se precisar de ajuda, utilize o menu ou chame o suporte. Boa compra! [ㅤㅤ](ht
 
 🛡️ Lembre-se de ler os /termos antes de prosseguir.
 
-Se precisar de ajuda, utilize o menu ou chame o suporte. Boa compra! [ㅤㅤ](https://i.4cdn.org/r/1749933222382233.jpg)`,
+Se precisar de ajuda, utilize o menu ou chame o suporte. Boa compra! [ㅤㅤ](https://i.4cdn.org/b/1753404701592459.jpg)`,
       {
         parse_mode: "Markdown",
         reply_markup: mainKeyboard,
